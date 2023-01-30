@@ -6,7 +6,6 @@ export default function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    //temp
     fetch('https://fakestoreapi.com/products')
       .then((response) => {
         return response.json();
@@ -29,7 +28,7 @@ export default function Home() {
         <main>this is main</main>
         <main>
           {products.map((product) => {
-            return <span key={product.id}>{product.tile}</span>;
+            return <span key={product.id}>{product.title}</span>;
           })}
         </main>
       </Layout>
